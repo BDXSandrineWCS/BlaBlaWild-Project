@@ -105,10 +105,8 @@ public class ItinerarySearchActivity extends AppCompatActivity {
 
     }
 
-
     private void updateLabel() {
-        String expressionFormat = "yyyy/MM/dd"; //In which you need put here
-        SimpleDateFormat dateFormat = new SimpleDateFormat(expressionFormat, Locale.US);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         editTextDate.setText(dateFormat.format(dateCalendar.getTime()));
     }
 
