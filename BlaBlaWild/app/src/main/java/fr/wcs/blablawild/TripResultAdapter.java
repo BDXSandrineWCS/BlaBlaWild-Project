@@ -11,10 +11,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class TripAdapter extends ArrayAdapter<TripModel> {
+public class TripResultAdapter extends ArrayAdapter<TripModel> {
 
 
-    public TripAdapter(Context context, ArrayList<TripModel> trips) {
+    public TripResultAdapter(Context context, ArrayList<TripModel> trips) {
         super(context, 0, trips);
     }
 
@@ -34,14 +34,14 @@ public class TripAdapter extends ArrayAdapter<TripModel> {
         // Populate the data into the template view using the data object
         firstname.setText(trip.getFirstname());
         lastname.setText(trip.getLastname());
-        date.setText(dateToString(trip.getDate()));
-        price.setText(trip.getPrice());
+        date.setText(dateToString(trip.getDateTrip()));
+        price.setText(String.valueOf(trip.getPrice()));
         // Return the completed view to render on screen
         return convertView;
     }
 
     public String dateToString(Date date){
-        SimpleDateFormat expressionFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+        SimpleDateFormat expressionFormat = new SimpleDateFormat(getContext().getResources().getString(R.string.date_and_hours_format_text));
         return expressionFormat.format(date);
     }
 

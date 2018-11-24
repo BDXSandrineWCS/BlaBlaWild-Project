@@ -6,7 +6,7 @@ public class TripModel {
 
     private String firstname;
     private String lastname;
-    private Date date;
+    private Date dateTrip;
     private int price;
 
     //constructor
@@ -19,7 +19,7 @@ public class TripModel {
         super();
         this.firstname = firstname;
         this.lastname = lastname;
-        this.date = date;
+        this.dateTrip = date;
         this.price = price;
     }
 
@@ -41,12 +41,12 @@ public class TripModel {
         this.lastname = lastname;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateTrip() {
+        return dateTrip;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateTrip(Date date) {
+        this.dateTrip = date;
     }
 
     public int getPrice() {

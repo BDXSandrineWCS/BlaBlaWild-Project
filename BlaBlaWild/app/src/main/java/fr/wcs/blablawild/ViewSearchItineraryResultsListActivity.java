@@ -8,8 +8,9 @@ import android.widget.ListView;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
-public class ItineraryListActivity extends AppCompatActivity {
+public class ViewSearchItineraryResultsListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class ItineraryListActivity extends AppCompatActivity {
         ListView listTrip = findViewById(R.id.list_trip);
         ArrayList<TripModel> results = new ArrayList<>();
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy-hh:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat(getResources().getString(R.string.date_and_hours_format_text));
 
         try {
             results.add(new TripModel("Eric", "Cartman", sdf.parse("21/02/2017-15:30"), 15));
@@ -39,8 +40,9 @@ public class ItineraryListActivity extends AppCompatActivity {
             results.add(new TripModel("Kyle", "McCormick", sdf.parse("21/02/2017-17:00"), 40));
             results.add(new TripModel("Wendy", "Testaburger", sdf.parse("21/02/2017-17:30"), 20));
         } catch (ParseException e) {
+            e.getMessage();
         }
-        TripAdapter adapter = new TripAdapter(this, results);
+        TripResultAdapter adapter = new TripResultAdapter(this, results);
         listTrip.setAdapter(adapter);
 
         // du code déjà existant peut être contenu après cette ligne !

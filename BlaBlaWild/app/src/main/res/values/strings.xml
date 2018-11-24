@@ -15,4 +15,5 @@
     <string name="firstname_item_hint_text">Firstname</string>
     <string name="lastname_item_hint_text">Lastname</string>
     <string name="price_item_hint_text">$19</string>
+    <string name="date_and_hours_format_text">dd/MM/yyyy-HH:mm</string>
 </resources>
