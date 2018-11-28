@@ -16,4 +16,7 @@
     <string name="lastname_item_hint_text">Lastname</string>
     <string name="price_item_hint_text">$19</string>
     <string name="date_and_hours_format_text">dd/MM/yyyy-HH:mm</string>
+    <string name="date_format_text">dd/MM/yyyy</string>
+    <string name="snack_make_text">"Replace with your own action"</string>
+    <string name="snack_make_action">Action</string>
 </resources>
