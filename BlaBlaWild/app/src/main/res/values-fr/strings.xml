@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlaBlaWild</string>
+    <string name="action_settings">paramètres</string>
+    <string name="search_itinerary_button">Chercher un itinéraire</string>
+    <string name="search_text">Chercher</string>
+    <string name="departure_text">Départ</string>
+    <string name="departure_hint_text">Ville de départ</string>
+    <string name="destination_text">Destination</string>
+    <string name="destination_hint_text">Ville d\'arrivée</string>
+    <string name="search_button_text">Chercher</string>
+    <string name="date_text">Date</string>
+    <string name="date_hint_text">28/11/2018</string>
+    <string name="no_departure_or_destination_text">Veuillez indiquer le départ et la destination, s\'il vous plaît !</string>
+    <string name="firstname_item_hint_text">Prénom</string>
+    <string name="lastname_item_hint_text">Nom</string>
+    <string name="price_item_hint_text">prix</string>
+    <string name="date_and_hours_format_text">dd/MM/yyyy-HH:mm</string>
+    <string name="date_format_text">dd/MM/yyyy</string>
+    <string name="snack_make_text">Remplacer avec votre action</string>
+    <string name="snack_make_action">Action</string>
+    <string name="date_item_hint_text">Date</string>
+</resources>

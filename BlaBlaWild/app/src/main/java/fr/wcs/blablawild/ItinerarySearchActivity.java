@@ -105,7 +105,7 @@ public class ItinerarySearchActivity extends AppCompatActivity {
     }
 
     private void updateLabel() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(getString(R.string.date_format_text));
         editTextDate.setText(dateFormat.format(dateCalendar.getTime()));
     }
 
