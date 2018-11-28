@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ItinerarySearchActivity" android:label="@string/search_text" />
-        <activity android:name=".ItineraryListActivity" android:parentActivityName=".ItinerarySearchActivity">
+        <activity android:name=".ViewSearchItineraryResultsListActivity" android:parentActivityName=".ItinerarySearchActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ItinerarySearchActivity" />

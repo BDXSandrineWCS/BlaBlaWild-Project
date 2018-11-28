@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
 
 public class ItinerarySearchActivity extends AppCompatActivity {
 
@@ -105,10 +104,8 @@ public class ItinerarySearchActivity extends AppCompatActivity {
 
     }
 
-
     private void updateLabel() {
-        String expressionFormat = "yyyy/MM/dd"; //In which you need put here
-        SimpleDateFormat dateFormat = new SimpleDateFormat(expressionFormat, Locale.US);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         editTextDate.setText(dateFormat.format(dateCalendar.getTime()));
     }
 
@@ -116,7 +113,7 @@ public class ItinerarySearchActivity extends AppCompatActivity {
     public void sendDataToItineraryList(View view) {
          /**
          * when click on search button in the activityIterarySearchLayout verify the edited text in the same layout and
-          * if departure or destination are empty create an error toast else sent to ItineraryListActivity with the text of the edits text of the layout as extra
+          * if departure or destination are empty create an error toast else sent to ViewSearchItineraryResultsListActivity with the text of the edits text of the layout as extra
           * @parameter view which call the method (buttonSearch)
           * @return void
           */
@@ -133,7 +130,7 @@ public class ItinerarySearchActivity extends AppCompatActivity {
                 editTextDeparture.setText(departure);
                 editTextDestination.setText(destination);
             }else {
-                Intent intent = new Intent(this, ItineraryListActivity.class);
+                Intent intent = new Intent(this, ViewSearchItineraryResultsListActivity.class);
                 intent.putExtra("EXTRA_DEPARTURE", departure);
                 intent.putExtra("EXTRA_DESTINATION", destination);
                 intent.putExtra("EXTRA_DATE", date);
